@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e5e9818068f387c4f9c124349aac629a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Halloween Funtime
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 72f0eb2de2de1854cbbee07a32cf07c8, type: 3}
+  - {fileID: 12800000, guid: 643cd015f431b5348987a5fe0f0cd103, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
