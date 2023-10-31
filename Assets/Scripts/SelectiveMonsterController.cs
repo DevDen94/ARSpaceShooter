@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectiveMonsterController : MonoBehaviour
 {
 
+    public GameObject AsteroidGenerator;
     public GameObject PumpkinGenerator;
     public GameObject BatsGenerator;
     public GameObject GhostGenerator;
@@ -31,7 +32,8 @@ public class SelectiveMonsterController : MonoBehaviour
     {
         if(MonsterTypeCheck == 0)
         {
-            PumpkinGenerator.SetActive(true);
+            //PumpkinGenerator.SetActive(true);
+            AsteroidGenerator.SetActive(true);
             BatsGenerator.SetActive(false);
             GhostGenerator.SetActive(false);
             WitchGenerator.SetActive(false);

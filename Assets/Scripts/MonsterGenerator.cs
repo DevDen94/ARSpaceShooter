@@ -13,8 +13,8 @@ public class MonsterGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        minSpawnTime = 1;
-        maxSpawnTime = 5;
+        minSpawnTime = 3;
+        maxSpawnTime = 8;
         
 
     }
@@ -22,8 +22,8 @@ public class MonsterGenerator : MonoBehaviour
 
     private void OnEnable()
     {
-        minSpawnTime = 1;
-        maxSpawnTime = 5;
+        minSpawnTime = 3;
+        maxSpawnTime = 8;
         StartCoroutine(MainRoutine());
        
     }

@@ -56,7 +56,7 @@ public class WebCamScript : MonoBehaviour {
     public void BulletFireButton()
     {
 
-       GameObject bullet = Instantiate(Resources.Load("bullet", typeof(GameObject))) as GameObject;
+       GameObject bullet = Instantiate(Resources.Load("bullet 1", typeof(GameObject))) as GameObject;
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         bullet.transform.rotation = Camera.main.transform.rotation;
         bullet.transform.position = Camera.main.transform.position;
