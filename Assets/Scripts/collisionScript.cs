@@ -27,10 +27,15 @@ public class collisionScript : MonoBehaviour
             foreach (Transform _child in col.transform)
             {
                 _child.SetParent(null);
-                _child.GetComponent<Rigidbody>().AddExplosionForce(80f, col.transform.position, 50f);
+                _child.GetComponent<Rigidbody>().AddExplosionForce(5f, col.transform.position, 50f);
                 _child.GetComponent<BoxCollider>().enabled = true;
                 _child.GetComponent<FolowToCamera>().enabled = true;
                 _child.GetComponent<Target>().enabled = true;
+
+                Vector3 direction = MonsterGenerator.Instance._mainCamera.position - _child.transform.position;
+                Quaternion rotation = Quaternion.LookRotation(direction);
+
+                _child.transform.rotation = rotation;
             }
             Destroy(col.gameObject);
             Destroy(gameObject);

@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class MonsterGenerator : MonoBehaviour
 {
+    public static MonsterGenerator Instance;
+
     [SerializeField] GameObject[] Monster;
     [SerializeField] int minSpawnTime;
     [SerializeField] int maxSpawnTime;
 
     public float DynamicSpawnTimeChange;
+
+
+    public Transform _mainCamera;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +63,15 @@ public class MonsterGenerator : MonoBehaviour
         position.z = Random.Range(-15, 15);
 
 
-        Instantiate(Monster[Random.Range(0, Monster.Length)], position, Quaternion.identity);
+
+        GameObject instatiatedMonster = Instantiate(Monster[Random.Range(0, Monster.Length)], position, Quaternion.identity);
+
+        Vector3 direction = _mainCamera.position - instatiatedMonster.transform.position;
+        Quaternion rotation = Quaternion.LookRotation(direction);
+
+        instatiatedMonster.transform.rotation = rotation;
+
+
         yield return new WaitForSeconds(0); // for more controll
     }
 }
