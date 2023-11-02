@@ -11,6 +11,20 @@ public class collisionScript : MonoBehaviour
 
         if (col.CompareTag("Enemy"))
         {
+
+
+            for(int i = 0; i < MonsterGenerator.Instance._enemies.Count; i++)
+            {
+                if (col.gameObject == MonsterGenerator.Instance._enemies[i])
+                {
+                    MonsterGenerator.Instance._enemies.Remove(col.gameObject);
+                }
+                else
+                {
+                    Debug.Log("No it is not in the List");
+                }
+            }
+
             GameObject explosion = Instantiate(Resources.Load("FlareMobile(Astroids)", typeof(GameObject))) as GameObject;
             explosion.transform.position = transform.position;
             Destroy(col.gameObject);
@@ -24,6 +38,18 @@ public class collisionScript : MonoBehaviour
 
         if (col.CompareTag("Asteroids"))
         {
+            for (int i = 0; i < MonsterGenerator.Instance._enemies.Count; i++)
+            {
+                if (col.gameObject == MonsterGenerator.Instance._enemies[i])
+                {
+                    MonsterGenerator.Instance._enemies.Remove(col.gameObject);
+                }
+                else
+                {
+                    Debug.Log("No it is not in the List");
+                }
+            }
+
             foreach (Transform _child in col.transform)
             {
                 _child.SetParent(null);

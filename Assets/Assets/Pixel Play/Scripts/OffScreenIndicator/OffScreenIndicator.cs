@@ -22,6 +22,8 @@ public class OffScreenIndicator : MonoBehaviour
 
     public static Action<Target, bool> TargetStateChanged;
 
+    private float newSizeOfArrow = 1f;
+
     void Awake()
     {
         mainCamera = Camera.main;
@@ -58,6 +60,8 @@ public class OffScreenIndicator : MonoBehaviour
                 OffScreenIndicatorCore.GetArrowIndicatorPositionAndAngle(ref screenPosition, ref angle, screenCentre, screenBounds);
                 indicator = GetIndicator(ref target.indicator, IndicatorType.ARROW); // Gets the arrow indicator from the pool.
                 indicator.transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg); // Sets the rotation for the arrow indicator.
+
+                MakingArrowLarger(indicator, target);
             }
             if(indicator)
             {
@@ -119,6 +123,23 @@ public class OffScreenIndicator : MonoBehaviour
             indicator.Activate(true); // Sets the indicator as active.
         }
         return indicator;
+    }
+
+    //Make the Arrow Larger accordingly the target comes near to the Player.
+    void MakingArrowLarger(Indicator indicator, Target target)
+    {
+        float distance = Vector3.Distance(target.transform.position, mainCamera.transform.position);
+        float maxDistance = Vector3.Distance(new(10, 10, 10), mainCamera.transform.position);
+
+        float diff = maxDistance - distance;
+
+        float value = diff / 10;
+
+        newSizeOfArrow = Mathf.Lerp(newSizeOfArrow, 1 + value, 1f);
+
+        newSizeOfArrow = Mathf.Clamp(newSizeOfArrow, 1f, 3f);
+
+        indicator.transform.localScale = new Vector3(newSizeOfArrow, newSizeOfArrow, 1.0f);
     }
 
     private void OnDestroy()
