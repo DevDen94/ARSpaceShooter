@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,13 +17,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text ScoreText;
     [SerializeField] Text TotalScoreText;
     [SerializeField] Text LivesText;
+    [SerializeField] Image HealthBar;
     [SerializeField] GameObject CrossHairKillEffect;
     [SerializeField] GameObject ScreenDamageEffect;
     [SerializeField] GameObject MonsterGenerator;
     public int Score;
     public int TotalScore;
     public int Lives;
-
+    public int maxHealth = 100;
+    public float currentHealth;
 
     int pre_score,pre_lives;
     public bool isover;
@@ -42,6 +45,8 @@ public class GameManager : MonoBehaviour
         Score = 0;
         pre_lives = Lives;
         Lives = 5;
+
+        currentHealth = maxHealth / 100;
     }
 
     
@@ -54,6 +59,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
             ScoreText.text = "" + Score;
             LivesText.text = "" + Lives;
+            HealthBar.fillAmount = currentHealth;
             
             if(pre_score != Score)
             {
@@ -89,13 +95,22 @@ public class GameManager : MonoBehaviour
                 GoogleAdMobController.instance.ShowInterstitialAd();
             }
 
+            if(currentHealth <= 0)
+            {
+                MonsterGenerator.SetActive(false);
+                ShowGameOverPanel();
+                Destroy(GameObject.FindWithTag("Enemy"));
 
+                PlayerPrefs.SetInt("TotalScore", TotalScore + Score);
+                TotalScore = TotalScore + Score;
+                TotalScoreText.text = "" + Score;
+                Debug.Log("Score");
+                isover = true;
+                GoogleAdMobController.instance.ShowInterstitialAd();
 
-
+                yield break;
+            }
         }
-        
-
-        
     }
 
 

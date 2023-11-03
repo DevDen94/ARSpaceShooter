@@ -39,8 +39,8 @@ public class MonsterGenerator : MonoBehaviour
 
         minSpawnTime = 2;
         maxSpawnTime = 4;
-        
 
+        Debug.Log("Satrt");
     }
 
 
@@ -54,6 +54,7 @@ public class MonsterGenerator : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("updateing");
         DynamicSpawnTimeChange += Time.deltaTime;
 
         calculatedTime += Time.deltaTime;
@@ -75,7 +76,6 @@ public class MonsterGenerator : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             if(_enemies.Count == 0)
             {
-                Debug.Log("Main Routine");
                 if(GeneratorRoutineCR != null )
                 {
                     StopCoroutine(GeneratorRoutineCR);
@@ -94,8 +94,6 @@ public class MonsterGenerator : MonoBehaviour
             position.x = Random.Range(-15, 15);
             position.y = Random.Range(-15, 15);
             position.z = Random.Range(-15, 15);
-
-            Debug.Log("Generating routine is working rapidly");
 
             GameObject instatiatedMonster = Instantiate(Monster[Random.Range(0, Monster.Length)], position, Quaternion.identity);
 

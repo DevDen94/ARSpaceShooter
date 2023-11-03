@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WebCamScript : MonoBehaviour {
     public GameObject webCameraPlane;
     public Button fire;
+    public Transform fireSpawnner;
     public ExtendedFlycam EFC; // For editor use only
 
     // Use this for initialization
@@ -55,17 +56,15 @@ public class WebCamScript : MonoBehaviour {
 
     public void BulletFireButton()
     {
-
-       GameObject bullet = Instantiate(Resources.Load("bullet 1", typeof(GameObject))) as GameObject;
+       GameObject bullet = Instantiate(Resources.Load("bullet Line", typeof(GameObject))) as GameObject;
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        bullet.transform.rotation = Camera.main.transform.rotation;
-        bullet.transform.position = Camera.main.transform.position;
-        rb.AddForce(Camera.main.transform.forward * 800f);
+        bullet.transform.rotation = fireSpawnner.rotation;
+        bullet.transform.position = fireSpawnner.position;
+        rb.AddForce(fireSpawnner.forward * 800f);
         Destroy(bullet, 3);
 
         if (AudioManager.instance.sound)
             GetComponent<AudioSource>().Play();
-
 
     }
 

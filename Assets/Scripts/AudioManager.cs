@@ -33,7 +33,6 @@ public class AudioManager : MonoBehaviour
 
     public void onButtonClick()
     {
-
         if(sound)
         ButtonClick.Play();
     }

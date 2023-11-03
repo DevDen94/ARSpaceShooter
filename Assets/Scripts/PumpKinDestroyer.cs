@@ -20,14 +20,12 @@ public class PumpKinDestroyer : MonoBehaviour
                 {
                     MonsterGenerator.Instance._enemies.Remove(other.gameObject);
                 }
-                else
-                {
-                    Debug.Log("No it is not in the List");
-                }
             }
 
             Destroy(other.gameObject);
-            GameManager.Instance.Lives--;
+            //GameManager.Instance.Lives--;
+
+            GameManager.Instance.currentHealth -= 0.03f;
         }
         if(other.CompareTag("Asteroids"))
         {
@@ -37,14 +35,10 @@ public class PumpKinDestroyer : MonoBehaviour
                 {
                     MonsterGenerator.Instance._enemies.Remove(other.gameObject);
                 }
-                else
-                {
-                    Debug.Log("No it is not in the List");
-                }
             }
 
             Destroy(other.gameObject);
-            GameManager.Instance.Lives--;
+            GameManager.Instance.currentHealth -= 0.05f;
         }
     }
 }
