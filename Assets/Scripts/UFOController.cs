@@ -2,57 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestingScript : MonoBehaviour
+public class UFOController : MonoBehaviour
 {
-    public float stoppingDist;
-    public float Speed;
-    public float BulletDelay;
-    public float BulletStartDelay;
-    public GameObject Bullet;
-    public Transform BulletSpawnner;
+    public float _stoppingDist;
+    public float _speed;
+    public float _bulletDelay;
+    public float _bulletStartDelay;
+    public GameObject _bullet;
+    public Transform _bulletSpawnner;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(FiringDelay());
-    }
+    bool isFiring;
 
     // Update is called once per frame
     void Update()
     {
         float dis = Vector3.Distance(transform.position, Camera.main.gameObject.transform.position);
 
-        if (dis > stoppingDist)
+        if (dis > _stoppingDist)
         {
             transform.LookAt(Camera.main.gameObject.transform.position);
-            transform.Translate(Speed * Time.deltaTime * Vector3.forward);
+            transform.Translate(_speed * Time.deltaTime * Vector3.forward);
         }
-    }
-
-    IEnumerator FiringDelay()
-    {
-        while (true)
+        else
         {
-            if (Vector3.Distance(transform.position, Camera.main.gameObject.transform.position) < stoppingDist)
+            if(!isFiring)
             {
-                yield return new WaitForSeconds(BulletStartDelay);
-
+                isFiring = true;
                 StartCoroutine(Firing());
-
-                yield break;
             }
         }
-
-        
     }
 
     IEnumerator Firing()
     {
         while (true)
         {
-            Instantiate(Bullet, BulletSpawnner.position, BulletSpawnner.rotation);
-
-            yield return new WaitForSeconds(BulletDelay);
+            Instantiate(_bullet, _bulletSpawnner.position, _bulletSpawnner.rotation);
+            yield return new WaitForSeconds(_bulletDelay);
         }
     }
 }

@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 8311949206894464135}
   - component: {fileID: 4029373760765549335}
   - component: {fileID: 8555914925793764968}
+  - component: {fileID: 4605312299480984052}
   m_Layer: 0
   m_Name: 166-_PP_Stone_Lava_01.116
   m_TagString: Untagged
@@ -305,6 +306,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4605312299480984052
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627353196518630070}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &2446574593805978639
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +678,7 @@ GameObject:
   - component: {fileID: 8655032901013082368}
   - component: {fileID: 6286097999077378734}
   - component: {fileID: 6809809180714837019}
+  - component: {fileID: 4851370237502929780}
   m_Layer: 0
   m_Name: S_Ast
   m_TagString: S_Ast
@@ -665,7 +694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3116708087162884208}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.019786036, y: -0.059360884, z: 0.1485684, w: 0.9869206}
   m_LocalPosition: {x: 1.077, y: 0, z: 0}
   m_LocalScale: {x: 0.43432, y: 0.43432, z: 0.43432}
   m_ConstrainProportionsScale: 0
@@ -678,7 +707,7 @@ Transform:
   - {fileID: 1554147171786131700}
   - {fileID: 3466894919040445833}
   m_Father: {fileID: 3539649353691631715}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.25, y: -6.4, z: 16.94}
 --- !u!65 &8655032901013082368
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -744,6 +773,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4851370237502929780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3116708087162884208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb5e166b5da08848ba8fceacf363de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorName: Purple
 --- !u!1 &3585534216783689876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1574,7 @@ GameObject:
   - component: {fileID: 1450855313376198938}
   - component: {fileID: 3131175338040457100}
   - component: {fileID: 1695139665419444350}
+  - component: {fileID: 5323317314961836785}
   m_Layer: 0
   m_Name: 166-_PP_Stone_Lava_01.117
   m_TagString: Untagged
@@ -1604,6 +1647,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5323317314961836785
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5158676906813368093}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &5352587387547653699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,6 +1685,7 @@ GameObject:
   - component: {fileID: 1888039588967511129}
   - component: {fileID: 2690649028050178604}
   - component: {fileID: 4684279901259232181}
+  - component: {fileID: 5034138568771339799}
   m_Layer: 0
   m_Name: 166-_PP_Stone_Lava_01.115
   m_TagString: Untagged
@@ -1687,6 +1758,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5034138568771339799
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5352587387547653699}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &5445352854775605151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +2018,7 @@ GameObject:
   - component: {fileID: 3688289342013045389}
   - component: {fileID: 1967601312337745539}
   - component: {fileID: 6952738830065202241}
+  - component: {fileID: 6073984889615119117}
   m_Layer: 0
   m_Name: 166-_PP_Stone_Lava_01.112
   m_TagString: Untagged
@@ -1992,6 +2091,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6073984889615119117
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5928518211201512276}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &6440776058410612798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2130,7 @@ GameObject:
   - component: {fileID: 4265539892668848037}
   - component: {fileID: 1887533200181701140}
   - component: {fileID: 7279540585831774114}
+  - component: {fileID: 3053562690171916179}
   m_Layer: 0
   m_Name: S_Ast
   m_TagString: S_Ast
@@ -2019,7 +2146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6440776058410612798}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.019786036, y: -0.059360884, z: 0.1485684, w: 0.9869206}
   m_LocalPosition: {x: -0.756, y: 0, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
@@ -2032,7 +2159,7 @@ Transform:
   - {fileID: 7988614163982674366}
   - {fileID: 5056529803952321391}
   m_Father: {fileID: 3539649353691631715}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.25, y: -6.4, z: 16.94}
 --- !u!65 &4265539892668848037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2098,6 +2225,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3053562690171916179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6440776058410612798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb5e166b5da08848ba8fceacf363de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorName: Purple
 --- !u!1 &6522462626880156845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,6 +2360,8 @@ GameObject:
   - component: {fileID: 3539649353691631715}
   - component: {fileID: 6209057195783792702}
   - component: {fileID: -665981046086328373}
+  - component: {fileID: -6048600708134342926}
+  - component: {fileID: 1886413948787009364}
   m_Layer: 0
   m_Name: Ast2
   m_TagString: Asteroids
@@ -2290,6 +2432,46 @@ MonoBehaviour:
   needArrowIndicator: 1
   needDistanceText: 0
   indicator: {fileID: 0}
+--- !u!114 &-6048600708134342926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639014116497615452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb5e166b5da08848ba8fceacf363de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorName: Purple
+--- !u!54 &1886413948787009364
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639014116497615452}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7023011125895427809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,6 +2705,7 @@ GameObject:
   - component: {fileID: 1984706853920471119}
   - component: {fileID: 3333036166326874409}
   - component: {fileID: 5302472339750413407}
+  - component: {fileID: 3467907390369996218}
   m_Layer: 0
   m_Name: 166-_PP_Stone_Lava_01.113
   m_TagString: Untagged
@@ -2595,6 +2778,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3467907390369996218
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7583917364408314004}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &7710430872563314697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2829,6 +3039,7 @@ GameObject:
   - component: {fileID: 2566588754486817725}
   - component: {fileID: 6358662357651880042}
   - component: {fileID: 5671687867966887073}
+  - component: {fileID: 5234745487988361010}
   m_Layer: 0
   m_Name: S_Ast
   m_TagString: S_Ast
@@ -2844,8 +3055,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8179066384085387665}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.756, y: 0, z: 0}
+  m_LocalRotation: {x: 0.11624518, y: 0.028675064, z: -0.06273147, w: 0.9908227}
+  m_LocalPosition: {x: 0.195, y: 0, z: 0}
   m_LocalScale: {x: 0.37244, y: 0.37244, z: 0.37244}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2857,7 +3068,7 @@ Transform:
   - {fileID: 534714762975703965}
   - {fileID: 3769940918756719877}
   m_Father: {fileID: 3539649353691631715}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.53, y: 2.49, z: -6.95}
 --- !u!65 &2566588754486817725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2923,6 +3134,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5234745487988361010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8179066384085387665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb5e166b5da08848ba8fceacf363de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorName: Purple
 --- !u!1 &8484687461126463970
 GameObject:
   m_ObjectHideFlags: 0
@@ -3156,6 +3380,7 @@ GameObject:
   - component: {fileID: 5573551402904603968}
   - component: {fileID: 1227250988097889777}
   - component: {fileID: 6045800333390224057}
+  - component: {fileID: 2682434020926055517}
   m_Layer: 0
   m_Name: Asteroid2
   m_TagString: Untagged
@@ -3228,6 +3453,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2682434020926055517
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783719172230917607}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &8816805856212408702
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,6 +3491,7 @@ GameObject:
   - component: {fileID: 640955370456115970}
   - component: {fileID: 5897202087673153246}
   - component: {fileID: 4232108823176232569}
+  - component: {fileID: 6429589471000554687}
   m_Layer: 0
   m_Name: 166-_PP_Stone_Lava_01.114
   m_TagString: Untagged
@@ -3311,3 +3564,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6429589471000554687
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8816805856212408702}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1

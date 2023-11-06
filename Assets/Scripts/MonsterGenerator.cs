@@ -39,8 +39,6 @@ public class MonsterGenerator : MonoBehaviour
 
         minSpawnTime = 2;
         maxSpawnTime = 4;
-
-        Debug.Log("Satrt");
     }
 
 
@@ -54,7 +52,6 @@ public class MonsterGenerator : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("updateing");
         DynamicSpawnTimeChange += Time.deltaTime;
 
         calculatedTime += Time.deltaTime;

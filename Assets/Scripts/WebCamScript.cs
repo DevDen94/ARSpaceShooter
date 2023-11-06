@@ -7,10 +7,17 @@ public class WebCamScript : MonoBehaviour {
     public GameObject webCameraPlane;
     public Button fire;
     public Transform fireSpawnner;
+    public Transform bulletTargeting;
     public ExtendedFlycam EFC; // For editor use only
 
+    Vector3 bulletDirection;
+    Quaternion bulletRotation;
+
+    Vector3 hitPoint;
+
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         if(Application.isMobilePlatform) {
             GameObject cameraParent = new GameObject("camParent");
             cameraParent.transform.position = this.transform.position;
@@ -31,16 +38,11 @@ public class WebCamScript : MonoBehaviour {
         webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
         webCameraTexture.Play();
 
-        
-        
-
-
-        
-
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
         if (Application.isMobilePlatform)
         {
             Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
@@ -52,15 +54,28 @@ public class WebCamScript : MonoBehaviour {
             BulletFireButton();
         }
 
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, transform.forward, out hit, 50f))
+        {
+            hitPoint = hit.point;
+
+            bulletDirection = hitPoint - fireSpawnner.position;
+            bulletRotation = Quaternion.LookRotation(bulletDirection);
+
+            fireSpawnner.rotation = bulletRotation;
+        }
+
     }
 
     public void BulletFireButton()
     {
-       GameObject bullet = Instantiate(Resources.Load("bullet Line", typeof(GameObject))) as GameObject;
+        GameObject bullet = Instantiate(Resources.Load("bullet Line", typeof(GameObject))) as GameObject;
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        
+
         bullet.transform.rotation = fireSpawnner.rotation;
         bullet.transform.position = fireSpawnner.position;
-        rb.AddForce(fireSpawnner.forward * 800f);
+        rb.AddForce(fireSpawnner.transform.forward * 1800f);
         Destroy(bullet, 3);
 
         if (AudioManager.instance.sound)

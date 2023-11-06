@@ -11,6 +11,7 @@ public class MainmenuScript : MonoBehaviour
     [SerializeField] GameObject MainMenuPanel;
     [SerializeField] GameObject MonsterSelectPanel;
     [SerializeField] GameObject SettingsSelectPanel;
+    [SerializeField] GameObject LoadingPanel;
     [SerializeField] Text CandiesText,CandiesText2;
     
     public bool Sound;
@@ -41,7 +42,6 @@ public class MainmenuScript : MonoBehaviour
 
     public void PlayButton()
     {
-
         AudioManager.instance.onButtonClick();
         SceneManager.LoadScene("GamePlay");
     }

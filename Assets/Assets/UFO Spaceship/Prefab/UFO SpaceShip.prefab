@@ -754,7 +754,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5730798251730721173}
-  - component: {fileID: 7921461669151762240}
+  - component: {fileID: -1354013840018314102}
+  - component: {fileID: -7764769947009839127}
   m_Layer: 0
   m_Name: UFO SpaceShip
   m_TagString: Untagged
@@ -780,7 +781,7 @@ Transform:
   - {fileID: 8546626440121993476}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &7921461669151762240
+--- !u!114 &-1354013840018314102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -792,12 +793,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b2ecf1056d6ee4ba2e5c543ac4fcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoppingDist: 3
+  stoppingDist: 10
   Speed: 2
   BulletDelay: 1
   BulletStartDelay: 3
   Bullet: {fileID: 1911565266620372715, guid: 605f86a6a5b06724b8b1b91761408087, type: 3}
   BulletSpawnner: {fileID: 6544507782391729688}
+--- !u!114 &-7764769947009839127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2513816204993753857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411060de4483b5e4c9847cd3cbc18554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetColor: {r: 1, g: 0, b: 0, a: 1}
+  needBoxIndicator: 1
+  needArrowIndicator: 1
+  needDistanceText: 0
+  indicator: {fileID: 0}
 --- !u!1 &2546159951485531758
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,9 +922,10 @@ GameObject:
   - component: {fileID: 6593759755055092519}
   - component: {fileID: 3940906741940165977}
   - component: {fileID: 4246265845136787775}
+  - component: {fileID: 6288903520732674745}
   m_Layer: 0
   m_Name: 0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,6 +1000,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6288903520732674745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385734526947656288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.050702658, y: 0.008710988, z: 0.050702658}
+  m_Center: {x: -0.0000019073498, y: 0.0004117497, z: 1.9333264e-13}
 --- !u!1 &3391645112624220423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,9 +1064,10 @@ GameObject:
   - component: {fileID: 7489960029042666067}
   - component: {fileID: 2593647707940078730}
   - component: {fileID: 7981744484608216882}
+  - component: {fileID: 4028163022640533576}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,6 +1137,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4028163022640533576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3403369339569838609}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.025208618, y: 0.02068605, z: 0.025201134}
+  m_Center: {x: 0.00005508031, y: -0.00970728, z: 8.605338e-12}
 --- !u!1 &3460305170482218772
 GameObject:
   m_ObjectHideFlags: 0

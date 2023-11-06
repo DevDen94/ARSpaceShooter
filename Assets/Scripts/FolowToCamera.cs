@@ -5,6 +5,8 @@ using UnityEngine;
 public class FolowToCamera : MonoBehaviour
 {
 
+    public string colorName;
+
     // Update is called once per frame
     void Update()
     {

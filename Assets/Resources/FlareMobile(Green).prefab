@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5683940555416095608}
   - component: {fileID: 3573293657108270549}
   m_Layer: 0
-  m_Name: FlareMobile(Astroids)
+  m_Name: FlareMobile(Green)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -187,7 +187,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0, g: 1, b: 0.08090758, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1277,7 +1277,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -1285,9 +1285,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
-        key1: {r: 0.3301887, g: 0.15033759, b: 0.010902463, a: 1}
-        key2: {r: 0.4056604, g: 0.28410485, b: 0.22005163, a: 1}
+        key0: {r: 1, g: 0.7349393, b: 0, a: 1}
+        key1: {r: 0.61960787, g: 0.26914188, b: 0, a: 1}
+        key2: {r: 1, g: 0.34400776, b: 0, a: 1}
         key3: {r: 1, g: 0, b: 0, a: 0}
         key4: {r: 1, g: 0, b: 0, a: 0}
         key5: {r: 1, g: 0, b: 0, a: 0}
