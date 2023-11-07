@@ -10,7 +10,7 @@ public class PlayerBulletScript : MonoBehaviour
 
         if (col.CompareTag("Enemy"))
         {
-            string colorCode = col.GetComponent<FolowToCamera>().colorName;
+            //string colorCode = col.GetComponent<UFOController>().colorName;
 
             for (int i = 0; i < MonsterGenerator.Instance._enemies.Count; i++)
             {
@@ -20,9 +20,9 @@ public class PlayerBulletScript : MonoBehaviour
                 }
             }
             AudioManager.instance.Explosion_();
-            GameObject explosion = Instantiate(Resources.Load("FlareMobile(" + colorCode + ")", typeof(GameObject))) as GameObject;
-            explosion.transform.position = transform.position;
-            Destroy(explosion, 2);
+            //GameObject explosion = Instantiate(Resources.Load("FlareMobile(" + colorCode + ")", typeof(GameObject))) as GameObject;
+            //explosion.transform.position = transform.position;
+            //Destroy(explosion, 2);
             Destroy(col.gameObject);
             Destroy(gameObject);
             GameManager.Instance.Score++;

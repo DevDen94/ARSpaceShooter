@@ -7097,7 +7097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &554844018
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11105,7 +11105,8 @@ MonoBehaviour:
   ButtonClick: {fileID: 377389404}
   fail: {fileID: 2068656717}
   Explosion: {fileID: 802577659}
-  sound: 0
+  sound: 1
+  music: 1
 --- !u!4 &1458451530
 Transform:
   m_ObjectHideFlags: 0

@@ -28,16 +28,29 @@ public class MainmenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        if(AudioManager.instance.music == true)
+        {
+            Music_.isOn = true;
+        }
+        else
+        {
+            Music_.isOn = false;
+        }
+
+        if (AudioManager.instance.sound == true)
+        {
+            Sound_.isOn = true;
+        }
+        else if (AudioManager.instance.sound == false)
+        {
+            Sound_.isOn = false;
+        }
+
         //PlayerPrefs.SetInt("TotalScore", 50);
         Time.timeScale = 1;
         CandiesText.text = ""+PlayerPrefs.GetInt("TotalScore",0);
         CandiesText2.text = "" + PlayerPrefs.GetInt("TotalScore", 0);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void PlayButton()
@@ -91,10 +104,12 @@ public class MainmenuScript : MonoBehaviour
     {
         if (Music_.isOn)
         {
+            AudioManager.instance.music = true;
             AudioManager.instance.MainMenu.Play();
         }
         else if (!Music_.isOn)
         {
+            AudioManager.instance.music = false;
             AudioManager.instance.MainMenu.Stop();
         }
 
@@ -103,11 +118,13 @@ public class MainmenuScript : MonoBehaviour
     {
         if (Sound_.isOn)
         {
-            AudioManager.instance.sound=true;
+            Debug.Log("yep sound on");
+            AudioManager.instance.sound = true;
         }
         else if (!Sound_.isOn)
         {
-            AudioManager.instance.sound=false;
+            Debug.Log("Not sound on");
+            AudioManager.instance.sound = false;
         }
     }
 

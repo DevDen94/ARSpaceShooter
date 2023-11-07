@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     {
         TotalScore = PlayerPrefs.GetInt("TotalScore", 0);
 
+        Time.timeScale = 1.0f;
+
         isover = false;
         Instance = this;
         Time.timeScale = 1;
@@ -99,8 +101,13 @@ public class GameManager : MonoBehaviour
             {
                 MonsterGenerator.SetActive(false);
                 ShowGameOverPanel();
-                Destroy(GameObject.FindWithTag("Enemy"));
 
+                FolowToCamera[] enemies = FindObjectsOfType<FolowToCamera>();
+
+                foreach(FolowToCamera item in enemies)
+                {
+                    Destroy(item.gameObject);
+                }
                 PlayerPrefs.SetInt("TotalScore", TotalScore + Score);
                 TotalScore = TotalScore + Score;
                 TotalScoreText.text = "" + Score;

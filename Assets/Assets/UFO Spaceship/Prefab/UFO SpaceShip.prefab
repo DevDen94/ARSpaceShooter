@@ -793,12 +793,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b2ecf1056d6ee4ba2e5c543ac4fcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoppingDist: 10
-  Speed: 2
-  BulletDelay: 1
-  BulletStartDelay: 3
-  Bullet: {fileID: 1911565266620372715, guid: 605f86a6a5b06724b8b1b91761408087, type: 3}
-  BulletSpawnner: {fileID: 6544507782391729688}
+  _stoppingDist: 0
+  _speed: 0
+  _bulletDelay: 0
+  _bulletStartDelay: 0
+  _bullet: {fileID: 0}
+  _bulletSpawnner: {fileID: 0}
 --- !u!114 &-7764769947009839127
 MonoBehaviour:
   m_ObjectHideFlags: 0

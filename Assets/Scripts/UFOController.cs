@@ -13,7 +13,6 @@ public class UFOController : MonoBehaviour
 
     bool isFiring;
 
-    // Update is called once per frame
     void Update()
     {
         float dis = Vector3.Distance(transform.position, Camera.main.gameObject.transform.position);

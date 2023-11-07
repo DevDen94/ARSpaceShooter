@@ -9,7 +9,9 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource MainMenu, ButtonClick, fail, Explosion;
 
-    public bool sound;
+    public bool sound = true;
+
+    public bool music = true;
 
 
     private void Awake()
@@ -28,7 +30,7 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        sound = true;
+        sound = true; music = true;
     }
 
     public void onButtonClick()
