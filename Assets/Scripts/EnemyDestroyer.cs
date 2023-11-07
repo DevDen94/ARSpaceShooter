@@ -18,7 +18,8 @@ public class EnemyDestroyer : MonoBehaviour
 
             Destroy(other.gameObject);
             //GameManager.Instance.Lives--;
-
+            GameManager.Instance.ScreenDamageEffect.SetActive(true);
+            Invoke(nameof(GameManager.Instance.DisableDamageTakenEffect), 0.1f);
             GameManager.Instance.currentHealth -= 0.03f;
         }
 
@@ -35,7 +36,8 @@ public class EnemyDestroyer : MonoBehaviour
 
             Destroy(other.gameObject);
             //GameManager.Instance.Lives--;
-
+            GameManager.Instance.ScreenDamageEffect.SetActive(true);
+            Invoke(nameof(GameManager.Instance.DisableDamageTakenEffect), 0.1f);
             GameManager.Instance.currentHealth -= 0.03f;
         }
 
@@ -52,12 +54,16 @@ public class EnemyDestroyer : MonoBehaviour
             }
 
             Destroy(other.gameObject);
+            GameManager.Instance.ScreenDamageEffect.SetActive(true);
+            Invoke(nameof(GameManager.Instance.DisableDamageTakenEffect), 0.1f);
             GameManager.Instance.currentHealth -= 0.05f;
         }
 
         if(other.CompareTag("Bullet"))
         {
-            Destroy(other.gameObject);
+            Destroy(other.gameObject); 
+            GameManager.Instance.ScreenDamageEffect.SetActive(true);
+            Invoke(nameof(GameManager.Instance.DisableDamageTakenEffect), 0.1f);
             GameManager.Instance.currentHealth -= 0.015f;
         }
     }

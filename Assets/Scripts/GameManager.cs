@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text LivesText;
     [SerializeField] Image HealthBar;
     [SerializeField] GameObject CrossHairKillEffect;
-    [SerializeField] GameObject ScreenDamageEffect;
+    public GameObject ScreenDamageEffect;
     [SerializeField] GameObject MonsterGenerator;
     public int Score;
     public int TotalScore;
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
         CrossHairKillEffect.SetActive(false);
     }
 
-    private void DisableDamageTakenEffect()
+    public void DisableDamageTakenEffect()
     {
 
         ScreenDamageEffect.SetActive(false);

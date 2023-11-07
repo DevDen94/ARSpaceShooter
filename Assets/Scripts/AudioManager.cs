@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
-    public AudioSource MainMenu, ButtonClick, fail;
+    public AudioSource MainMenu, ButtonClick, fail, Explosion;
 
     public bool sound;
 
@@ -42,4 +42,9 @@ public class AudioManager : MonoBehaviour
         fail.Play();
     }
 
+    public void Explosion_()
+    {
+        if(sound)
+            Explosion.Play();
+    }
 }

@@ -19,7 +19,7 @@ public class PlayerBulletScript : MonoBehaviour
                     MonsterGenerator.Instance._enemies.Remove(col.gameObject);
                 }
             }
-
+            AudioManager.instance.Explosion_();
             GameObject explosion = Instantiate(Resources.Load("FlareMobile(" + colorCode + ")", typeof(GameObject))) as GameObject;
             explosion.transform.position = transform.position;
             Destroy(explosion, 2);
@@ -33,6 +33,7 @@ public class PlayerBulletScript : MonoBehaviour
 
         if (col.CompareTag("Asteroids"))
         {
+            AudioManager.instance.Explosion_();
             string colorCode = col.GetComponent<FolowToCamera>().colorName;
 
             foreach (Transform item in col.transform)
@@ -62,6 +63,7 @@ public class PlayerBulletScript : MonoBehaviour
 
         if(col.CompareTag("S_Ast"))
         {
+            AudioManager.instance.Explosion_();
             string colorCode = col.GetComponent<FolowToCamera>().colorName;
 
             foreach (Transform item in col.transform)
